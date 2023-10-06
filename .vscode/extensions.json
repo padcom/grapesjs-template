@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "alfredbirk.tailwind-documentation",
+    "vue.vscode-typescript-vue-plugin",
+    "hollowtree.vue-snippets",
+    "vue.volar",
+    "cpylua.language-postcss",
+    "csstools.postcss",
+    "dbaeumer.vscode-eslint",
+    "zixuanchen.vitest-explorer",
+    "streetsidesoftware.code-spell-checker",
+    "streetsidesoftware.code-spell-checker-german",
+    "streetsidesoftware.code-spell-checker-polish"
+  ]
+}
