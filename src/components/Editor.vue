@@ -13,7 +13,7 @@ const gjs = ref<HTMLElement>()
 onMounted(() => {
   grapesjs.init({
     container: gjs.value,
-    height: '100vh',
+    height: '100dvh',
     storageManager: false,
     plugins: [
       example,

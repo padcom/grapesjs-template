@@ -9,7 +9,7 @@ export default {
   content: [
     // include index.html only in dev mode
     process.env.NODE_ENV === 'development' ? './index.html' : false,
-    './src/tailwind.css',
+    './src/main.css',
     './src/components/**/*.{css,vue}',
   ].filter(x => x),
   corePlugins: {
