@@ -1,6 +1,6 @@
 import { shallowRef, watch } from 'vue'
 import { createGlobalState } from '@vueuse/core'
-import { Page, type Editor } from 'grapesjs'
+import type { Page, Editor } from 'grapesjs'
 
 function createEditor() {
   const editor = shallowRef<Editor>()
