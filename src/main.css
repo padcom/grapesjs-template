@@ -1,3 +1,6 @@
+@import "@padcom/nano-css-reset/reset-layer.css";
+@import "grapesjs/dist/css/grapes.min.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
