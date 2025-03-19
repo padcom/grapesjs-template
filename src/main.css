@@ -3,6 +3,10 @@ html, body {
   padding: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .gjs-project-data {
   max-height: 50vh;
   overflow: auto;

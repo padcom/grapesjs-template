@@ -4,11 +4,23 @@
   <script type="importmap">
     {
       "imports": {
-        "vue": "https://unpkg.com/vue@3.5/dist/vue.esm-browser.js",
-        "grapesjs": "https://unpkg.com/grapesjs/dist/grapes.mjs"
+        "vue": "https://unpkg.com/vue@3.5/dist/vue.esm-browser.prod.js",
+        "grapesjs": "https://unpkg.com/grapesjs@0.22/dist/grapes.mjs"
       }
     }
   </script>
+
+  <!--
+    Currently locales are bundled in the final build because they can't be imported
+    using `<script type="importmap">`: https://github.com/GrapesJS/grapesjs/issues/2721
+
+    Once the problem is fixed you can move the following lines to the `importmap`
+    and remove the corresponding entries from `vite.config.js`
+
+        "grapesjs/locale/en": "https://unpkg.com/grapesjs/locale/en.js",
+        "grapesjs/locale/de": "https://unpkg.com/grapesjs/locale/de.js",
+        "grapesjs/locale/pl": "https://unpkg.com/grapesjs/locale/pl.js"
+  -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/favicon.png">
