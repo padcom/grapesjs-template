@@ -14,20 +14,20 @@ export function initialize(gjs: HTMLElement | string) {
   editor.value = grapesjs.init({
     container: gjs,
     height: '100dvh',
-    storageManager: false,
     plugins: [
       example,
       openBlocksByDefault,
       showProjectData,
       disableImageResize,
     ],
-    i18n: {
-      messages,
-    },
     assetManager: {
       assets: [
         'https://upload.wikimedia.org/wikipedia/commons/3/3f/JPEG_example_flower.jpg',
       ],
     },
+    i18n: {
+      messages,
+    },
+    storageManager: false,
   })
 }
