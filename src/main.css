@@ -1,14 +1,10 @@
-@import "@padcom/nano-css-reset/reset-layer.css";
-@import "grapesjs/dist/css/grapes.min.css";
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 html, body {
-  @apply m-0 p-0;
+  margin: 0;
+  padding: 0;
 }
 
-.gjs-editor-cont {
-  line-height: initial;
+.gjs-project-data {
+  max-height: 50vh;
+  overflow: auto;
+  color: #eee;
 }
