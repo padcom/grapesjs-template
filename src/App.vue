@@ -1,14 +1,12 @@
 <template>
-  <div ref="gjs" />
+  <div id="editor" />
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue'
+import { onMounted } from 'vue'
 import { initialize } from './grapesjs'
 
-const gjs = ref<HTMLElement>()
-
 onMounted(() => {
-  initialize(gjs.value!)
+  initialize('#editor')
 })
 </script>
