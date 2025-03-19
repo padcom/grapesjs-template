@@ -24,5 +24,10 @@ export function initialize(gjs: HTMLElement | string) {
     i18n: {
       messages,
     },
+    assetManager: {
+      assets: [
+        'https://upload.wikimedia.org/wikipedia/commons/3/3f/JPEG_example_flower.jpg',
+      ],
+    },
   })
 }
