@@ -19,8 +19,8 @@
   "author": "Matthias Hryniszak <padcom@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@padcom/nano-css-reset": "0.3.0",
     "@padcom/eslint-config-vue": "0.20.1",
+    "@padcom/nano-css-reset": "0.3.0",
     "@padcom/tsconfig": "0.0.2",
     "@padcom/vite-config-vue": "0.10.0",
     "@vue/test-utils": "^2.4.6",

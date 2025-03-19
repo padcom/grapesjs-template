@@ -1,5 +1,5 @@
 // @ts-ignore No type information for language
-import en from 'grapesjs/locale/pl'
+import en from 'grapesjs/locale/en'
 
 export default {
   ...en,

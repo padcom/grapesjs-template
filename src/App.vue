@@ -3,13 +3,20 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted } from 'vue'
+import { onMounted, onBeforeUnmount } from 'vue'
 import { useEditor } from './composables/editor'
 import { initialize } from './grapesjs'
 
 const { editor } = useEditor()
 
 onMounted(async () => {
-  editor.value = await initialize('#editor')
+  editor.value = await initialize({
+    container: '#editor',
+    height: '100dvh',
+  })
+})
+
+onBeforeUnmount(() => {
+  editor.value?.destroy()
 })
 </script>
