@@ -4,9 +4,12 @@
 
 <script lang="ts" setup>
 import { onMounted } from 'vue'
+import { useEditor } from './composables/editor'
 import { initialize } from './grapesjs'
 
-onMounted(() => {
-  initialize('#editor')
+const { editor } = useEditor()
+
+onMounted(async () => {
+  editor.value = await initialize('#editor')
 })
 </script>
