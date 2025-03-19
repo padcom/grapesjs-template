@@ -1,6 +1,6 @@
 import { type Editor } from 'grapesjs'
 
-export function example(editor: Editor) {
+export function exampleBlock(editor: Editor) {
   editor.I18n.addMessages({
     en: {
       'blockManager.labels.example': 'Example',

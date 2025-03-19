@@ -1,6 +1,6 @@
 import { type Editor } from 'grapesjs'
 
-export function image(editor: Editor) {
+export function imageBlock(editor: Editor) {
   editor.I18n.addMessages({
     en: {
       'blockManager.labels.image': 'Image',
