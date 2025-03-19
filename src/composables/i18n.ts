@@ -2,9 +2,9 @@ import { ref, readonly, watch } from 'vue'
 import { useEditor } from './editor'
 
 export interface TranslateOpts {
-  params?: Record<string, any>,
-  l?: string,
-  noWarn?: boolean,
+  params?: Record<string, any>
+  l?: string
+  noWarn?: boolean
 }
 
 export function useI18n() {
