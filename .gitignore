@@ -3,5 +3,5 @@ dist
 coverage
 .vercel
 public/vue.js
-public/grapes.mjs
+public/grapes.js
 public/grapes.css

@@ -12,7 +12,7 @@ const copyLibrariesToPublic = {
   async load() {
     try {
       await copyFile('./node_modules/vue/dist/vue.esm-browser.prod.js', './public/vue.js')
-      await copyFile('./node_modules/grapesjs/dist/grapes.mjs', './public/grapes.mjs')
+      await copyFile('./node_modules/grapesjs/dist/grapes.mjs', './public/grapes.js')
       await copyFile('./node_modules/grapesjs/dist/css/grapes.min.css', './public/grapes.css')
     } catch (e) {
       console.warn('Unable to copy files', e)
