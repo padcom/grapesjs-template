@@ -2,3 +2,6 @@ node_modules
 dist
 coverage
 .vercel
+public/vue.js
+public/grapes.mjs
+public/grapes.css
