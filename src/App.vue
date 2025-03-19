@@ -13,6 +13,11 @@ onMounted(async () => {
   editor.value = await initialize({
     container: '#editor',
     height: '100dvh',
+    i18n: {
+      // debug: true,
+      // locale: 'de',
+      // detectLocale: false,
+    },
   })
 })
 

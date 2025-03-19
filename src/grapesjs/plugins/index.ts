@@ -2,4 +2,6 @@
 export * from './open-blocks-by-default'
 export * from './show-project-data'
 export * from './disable-image-resize'
-export * from './example'
+export * from './image-block'
+export * from './example-block'
+export * from './example-component'

@@ -1,3 +1,5 @@
 import type { StorageManagerConfig } from 'grapesjs'
 
-export const storageManager: StorageManagerConfig | boolean = false
+export const storageManager: StorageManagerConfig | boolean = {
+  type: 'local',
+}
