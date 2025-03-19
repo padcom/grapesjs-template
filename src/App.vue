@@ -9,6 +9,6 @@ import { initialize } from './grapesjs'
 const gjs = ref<HTMLElement>()
 
 onMounted(() => {
-  initialize(gjs.value)
+  initialize(gjs.value!)
 })
 </script>
