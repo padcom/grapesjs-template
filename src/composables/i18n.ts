@@ -1,4 +1,5 @@
 import { ref, readonly, watch } from 'vue'
+import { createGlobalState } from '@vueuse/core'
 import { useEditor } from './editor'
 
 export interface TranslateOpts {
@@ -7,8 +8,15 @@ export interface TranslateOpts {
   noWarn?: boolean
 }
 
-export function useI18n() {
+function getAgentLocale(defaultLocale = 'en') {
+  return globalThis.navigator?.language.split('-')[0] || defaultLocale
+}
+
+function createI18n() {
   const { editor } = useEditor()
+
+  const locale = ref(getAgentLocale())
+  const locales = ref<string[]>([])
 
   function t(key: string, opts?: TranslateOpts) {
     if (editor.value) {
@@ -18,19 +26,22 @@ export function useI18n() {
     }
   }
 
-  const locale = ref('en')
-
   function update() {
-    locale.value = editor.value?.I18n.getLocale() || 'en'
+    locales.value = [...Object.keys(editor.value?.I18n?.getMessages() || { en: '' })]
   }
 
   watch([editor], () => {
-    update()
-    editor.value?.on('i18n', update)
+    editor.value?.onReady(update)
+    editor.value?.on('i18n:locale', ({ value }: { value: string }) => {
+      locale.value = value
+    })
   })
 
   return {
     t,
-    locale: readonly(locale),
+    locale,
+    locales: readonly(locales),
   }
 }
+
+export const useI18n = createGlobalState(createI18n)

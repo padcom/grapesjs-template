@@ -1,12 +1,27 @@
 @import "grapesjs/dist/css/grapes.min.css";
 
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
 * {
   box-sizing: border-box;
+}
+
+html, body, #app {
+  margin: 0;
+  padding: 0;
+  height: 100dvh;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+}
+
+#toolbar {
+  padding: 4px 2px;
+  display: flex;
+}
+
+.spacer {
+  flex: 1;
 }
 
 .gjs-project-data {

@@ -1,27 +1,23 @@
 <template>
-  <div id="editor" />
+  <div v-cloak id="toolbar">
+    <div>{{ t('title') }}</div>
+    <div class="spacer" />
+    <LanguageSelector />
+  </div>
+  <!--
+    https://github.com/GrapesJS/grapesjs/issues/3622#issuecomment-888260710
+
+    We're keying the editor here so that it gets re-initialized after locale is changed.
+    Otherwise the editor's locale doesn't change everywhere (e.g the list of blocks):
+    -->
+  <Editor :key="locale" :locale="locale" />
 </template>
 
 <script lang="ts" setup>
-import { onMounted, onBeforeUnmount } from 'vue'
-import { initialize } from './grapesjs'
-import { useEditor } from './composables/editor'
+import LanguageSelector from './components/LanguageSelector.vue'
+import Editor from './components/Editor.vue'
 
-const { editor } = useEditor()
+import { useI18n } from './composables/i18n'
 
-onMounted(async () => {
-  editor.value = await initialize({
-    container: '#editor',
-    height: '100dvh',
-    i18n: {
-      // debug: true,
-      // locale: 'de',
-      // detectLocale: false,
-    },
-  })
-})
-
-onBeforeUnmount(() => {
-  editor.value?.destroy()
-})
+const { t, locale } = useI18n()
 </script>

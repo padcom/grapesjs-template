@@ -23,6 +23,10 @@ export function registerExampleElement() {
 
 export function addExampleComponentMessages(editor: Editor) {
   editor.I18n.addMessages({
+    en: {
+      'domComponents.names.example-component': 'Example component',
+      'blockManager.labels.example-component': 'Example component',
+    },
     de: {
       'domComponents.names.example-component': 'Beispielkomponente',
       'blockManager.labels.example-component': 'Beispielkomponente',
