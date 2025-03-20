@@ -4,5 +4,5 @@ import { merge } from '../../lib/merge'
 
 export default merge(de, {
   'language-selector': 'Sprache',
-  'title': 'Beispiel GrapesJS Anwendung in Vue.js',
+  'title': 'Beispiel einer GrapesJS-Anwendung mit Vue.js',
 })

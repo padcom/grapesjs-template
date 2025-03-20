@@ -1,6 +1,6 @@
 <template>
   <div v-cloak id="toolbar">
-    <div>{{ t('title') }}</div>
+    <header>{{ t('title') }}</header>
     <div class="spacer" />
     <LanguageSelector />
   </div>
@@ -9,7 +9,7 @@
 
     We're keying the editor here so that it gets re-initialized after locale is changed.
     Otherwise the editor's locale doesn't change everywhere (e.g the list of blocks):
-    -->
+  -->
   <Editor :key="locale" :locale="locale" />
 </template>
 
@@ -21,3 +21,21 @@ import { useI18n } from './composables/i18n'
 
 const { t, locale } = useI18n()
 </script>
+
+<style lang="postcss" scoped>
+#toolbar {
+  padding: 4px 2px;
+  display: flex;
+}
+
+.spacer {
+  flex: 1;
+}
+
+header {
+  font-weight: bolder;
+  font-size: 24px;
+  color: #555;
+  margin: 0;
+}
+</style>

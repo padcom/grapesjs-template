@@ -19,5 +19,10 @@ const { t, locale, locales } = useI18n()
 .langauge-selector {
   display: flex;
   gap: 0.5rem;
+  align-items: center;
+
+  select {
+    padding: 2px 8px;
+  }
 }
 </style>
