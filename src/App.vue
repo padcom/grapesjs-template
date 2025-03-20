@@ -4,8 +4,8 @@
 
 <script lang="ts" setup>
 import { onMounted, onBeforeUnmount } from 'vue'
-import { useEditor } from './composables/editor'
 import { initialize } from './grapesjs'
+import { useEditor } from './composables/editor'
 
 const { editor } = useEditor()
 
