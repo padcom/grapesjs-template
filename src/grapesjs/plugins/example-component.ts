@@ -15,13 +15,13 @@ declare global {
   }
 }
 
-function registerExampleElement() {
+export function registerExampleElement() {
   if (!customElements.get('example-component')) {
     customElements.define('example-component', HTMLExampleElement)
   }
 }
 
-function defineExampleComponentMessages(editor: Editor) {
+export function addExampleComponentMessages(editor: Editor) {
   editor.I18n.addMessages({
     en: {
       'domComponents.names.example-component': 'Example component',
@@ -38,7 +38,7 @@ function defineExampleComponentMessages(editor: Editor) {
   })
 }
 
-function defineMyComponentType(editor: Editor) {
+export function addExampleComponentType(editor: Editor) {
   editor.Components.addType('example-component', {
     block: {
       label: 'example-component',
@@ -63,10 +63,4 @@ function defineMyComponentType(editor: Editor) {
       },
     },
   })
-}
-
-export function exampleComponent(editor: Editor) {
-  registerExampleElement()
-  defineExampleComponentMessages(editor)
-  defineMyComponentType(editor)
 }

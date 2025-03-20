@@ -1,6 +1,6 @@
 import type { Editor } from 'grapesjs'
 
-function addNewProjectMessages(editor: Editor) {
+export function addNewProjectMessages(editor: Editor) {
   editor.I18n.addMessages({
     en: {
       'cmd.new-project.title': 'Create new project',
@@ -17,7 +17,7 @@ function addNewProjectMessages(editor: Editor) {
   })
 }
 
-function addNewProjectCommand(editor: Editor) {
+export function addNewProjectCommand(editor: Editor) {
   editor.Commands.add('new-project', () => {
     // eslint-disable-next-line no-alert
     if (confirm(editor.t('cmd.new-project.confirm-new-project'))) {
@@ -32,7 +32,7 @@ function addNewProjectCommand(editor: Editor) {
   })
 }
 
-function addNewProjectPanelButton(editor: Editor) {
+export function addNewProjectPanelButton(editor: Editor) {
   editor.Panels.addButton('options', {
     id: 'new-file',
     className: 'fa fa-file',
@@ -41,10 +41,4 @@ function addNewProjectPanelButton(editor: Editor) {
       title: editor.t('cmd.new-project.title'),
     },
   })
-}
-
-export function newProject(editor: Editor) {
-  addNewProjectMessages(editor)
-  addNewProjectCommand(editor)
-  addNewProjectPanelButton(editor)
 }

@@ -1,6 +1,6 @@
 import type { Editor } from 'grapesjs'
 
-export function showProjectData(editor: Editor) {
+export function addShowProjectDataMessages(editor: Editor) {
   editor.I18n.addMessages({
     en: {
       'cmd.project-data.show-project-data': 'Show project data',
@@ -15,20 +15,26 @@ export function showProjectData(editor: Editor) {
       'cmd.project-data.project-data': 'Dane projektu',
     },
   })
+}
 
+export function addShowProjectDataCommand(editor: Editor) {
+  editor.Commands.add('show-project-data', () => {
+    const projectData = JSON.stringify(editor.getProjectData(), null, 2)
+    editor.Modal.open({
+      title: editor.t('cmd.project-data.project-data'),
+      content: `
+        <pre class="gjs-project-data">${projectData}</pre>
+      `,
+    })
+  })
+}
+
+export function addShowProjectDataPanelButton(editor: Editor) {
   editor.Panels.addButton('options', {
     className: 'fa fa-bug',
     attributes: {
       title: editor.t('cmd.project-data.show-project-data'),
     },
-    command() {
-      const projectData = JSON.stringify(editor.getProjectData(), null, 2)
-      editor.Modal.open({
-        title: editor.t('cmd.project-data.project-data'),
-        content: `
-          <pre class="gjs-project-data">${projectData}</pre>
-        `,
-      })
-    },
+    command: 'show-project-data',
   })
 }
