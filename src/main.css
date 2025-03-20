@@ -14,3 +14,7 @@ html, body {
   overflow: auto;
   color: #eee;
 }
+
+.gjs-block__media .fa {
+  font-size: 32px;
+}

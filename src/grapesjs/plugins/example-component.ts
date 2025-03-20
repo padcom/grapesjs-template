@@ -23,10 +23,6 @@ export function registerExampleElement() {
 
 export function addExampleComponentMessages(editor: Editor) {
   editor.I18n.addMessages({
-    en: {
-      'domComponents.names.example-component': 'Example component',
-      'blockManager.labels.example-component': 'Example component',
-    },
     de: {
       'domComponents.names.example-component': 'Beispielkomponente',
       'blockManager.labels.example-component': 'Beispielkomponente',
@@ -41,7 +37,8 @@ export function addExampleComponentMessages(editor: Editor) {
 export function addExampleComponentType(editor: Editor) {
   editor.Components.addType('example-component', {
     block: {
-      label: 'example-component',
+      label: 'Example component',
+      media: '<i class="fa fa-braille"></i>',
     },
     isComponent: el => el.tagName === 'EXAMPLE-COMPONENT',
     model: {

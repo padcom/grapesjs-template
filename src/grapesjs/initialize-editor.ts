@@ -13,8 +13,6 @@ export function initialize(config: EditorConfig): Promise<Editor> {
       ...configuration,
     }))
 
-    editor.onReady(() => {
-      resolve(editor)
-    })
+    editor.onReady(() => resolve(editor))
   })
 }
