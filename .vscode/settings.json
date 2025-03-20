@@ -1,15 +1,6 @@
 {
-  "files.associations": {
-    "*.css": "tailwindcss"
-  },
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit"
   },
-  "testing.automaticallyOpenPeekView": "never",
-  "cSpell.words": [
-    "flowbite",
-    "intlify",
-    "unplugin"
-  ],
-  "cSpell.language": "en,de,pl"
+  "testing.automaticallyOpenPeekView": "never"
 }
