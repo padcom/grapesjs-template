@@ -29,6 +29,10 @@ export function addShowProjectDataCommand(editor: Editor) {
   })
 }
 
+export function addShowProjectDataKeyboardShortcut(editor: Editor) {
+  editor.Keymaps.add('show-project-data', 'ctrl+e', 'show-project-data', { prevent: true })
+}
+
 export function addShowProjectDataPanelButton(editor: Editor) {
   editor.Panels.addButton('options', {
     className: 'fa fa-bug',
