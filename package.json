@@ -22,7 +22,7 @@
     "@padcom/eslint-config-vue": "0.20.1",
     "@padcom/nano-css-reset": "0.3.0",
     "@padcom/tsconfig": "0.0.2",
-    "@padcom/vite-config-vue": "0.12.0",
+    "@padcom/vite-config-vue": "0.12.1",
     "@vue/test-utils": "^2.4.6",
     "@vueuse/core": "^11.1.0",
     "grapesjs": "^0.22.6",
