@@ -1,0 +1,11 @@
+@import "grapesjs/dist/css/grapes.min.css";
+
+.gjs-block__media .fa {
+  font-size: 32px;
+}
+
+.gjs-project-data {
+  max-height: 50vh;
+  overflow: auto;
+  color: #eee;
+}

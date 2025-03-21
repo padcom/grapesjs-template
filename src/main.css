@@ -1,4 +1,4 @@
-@import "grapesjs/dist/css/grapes.min.css";
+@import "./grapesjs/styles.css";
 
 * {
   box-sizing: border-box;
@@ -14,14 +14,4 @@ html, body, #app {
 #app {
   display: flex;
   flex-direction: column;
-}
-
-.gjs-block__media .fa {
-  font-size: 32px;
-}
-
-.gjs-project-data {
-  max-height: 50vh;
-  overflow: auto;
-  color: #eee;
 }
