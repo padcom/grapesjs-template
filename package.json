@@ -6,6 +6,7 @@
   "scripts": {
     "start": "vite",
     "dev": "vite",
+    "clean": "rimraf dist",
     "build": "vite build",
     "preview": "npm run build && vite preview",
     "lint": "eslint './src/**/*.{ts,vue}'",
@@ -32,11 +33,6 @@
     "vite": "^6.2.2",
     "vitest": "^3.0.9",
     "vue": "^3.5.13"
-  },
-  "eslintConfig": {
-    "extends": [
-      "@padcom/eslint-config-vue"
-    ]
   },
   "homepage": "https://github.com/padcom/grapesjs-template#readme",
   "bugs": {
