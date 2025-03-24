@@ -41,6 +41,7 @@ export function addExampleComponentMessages(editor: Editor) {
 export function addExampleComponentType(editor: Editor) {
   editor.Components.addType('example-component', {
     block: {
+      category: 'Example',
       label: 'Example component',
       media: '<i class="fa fa-braille"></i>',
     },

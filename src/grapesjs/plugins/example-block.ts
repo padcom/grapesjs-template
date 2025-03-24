@@ -11,6 +11,7 @@ export function exampleBlock(editor: Editor) {
   })
 
   editor.Blocks.add('example-block', {
+    category: 'Example',
     label: 'Example',
     media: '<i class="fa fa-briefcase"></i>',
     activate: true,

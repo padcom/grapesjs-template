@@ -11,6 +11,7 @@ export function imageBlock(editor: Editor) {
   })
 
   editor.Blocks.add('image', {
+    category: 'Basic',
     label: 'Image',
     media: '<i class="fa fa-image"></i>',
     activate: true,
