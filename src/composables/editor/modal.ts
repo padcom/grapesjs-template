@@ -22,8 +22,8 @@ function createModal() {
 
   // eslint-disable-next-line complexity
   function open(opts: OpenModalOptions) {
-    if (opts.onOpen) editor.value?.once('modal:open', opts.onOpen)
-    if (opts.onClose) editor.value?.once('modal:close', opts.onClose)
+    if (opts?.onOpen) editor.value?.once('modal:open', opts.onOpen)
+    if (opts?.onClose) editor.value?.once('modal:close', opts.onClose)
     editor.value?.Modal.open(opts)
   }
 
