@@ -13,5 +13,8 @@ export function exampleEditorDialog(editor: Editor) {
     className: 'fa fa-snowflake-o',
     command: 'example',
     options: { value: 1 },
+    attributes: {
+      title: editor.I18n.t('example'),
+    },
   })
 }

@@ -1,5 +1,5 @@
 <template>
-  <div v-cloak id="toolbar">
+  <div v-cloak id="toolbar" :class="{ hidden: isPreviewMode }">
     <header>{{ t('title') }}</header>
     <div class="spacer" />
     <LanguageSelector />
@@ -18,8 +18,10 @@ import LanguageSelector from './components/LanguageSelector.vue'
 import Editor from './components/Editor.vue'
 
 import { useI18n } from './composables/i18n'
+import { useEditor } from './composables/editor'
 
 const { t, locale } = useI18n()
+const { isPreviewMode } = useEditor()
 </script>
 
 <style lang="postcss" scoped>
