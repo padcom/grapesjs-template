@@ -1,6 +1,6 @@
 import type { Editor } from 'grapesjs'
 
-class HTMLExampleElement extends HTMLElement {
+class HTMLExampleComponentElement extends HTMLElement {
   constructor() {
     super()
 
@@ -11,13 +11,13 @@ class HTMLExampleElement extends HTMLElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'example-component': HTMLExampleElement
+    'example-component': HTMLExampleComponentElement
   }
 }
 
 export function registerExampleElement() {
   if (!customElements.get('example-component')) {
-    customElements.define('example-component', HTMLExampleElement)
+    customElements.define('example-component', HTMLExampleComponentElement)
   }
 }
 
